@@ -14,6 +14,7 @@ export default function Dropdown(elementName, items) {
   const icon = document.createElement("img");
   icon.src = chevronDown;
   icon.setAttribute("alt", "chevron-down");
+  icon.classList.add("element-icon");
 
   element.append(p, icon);
 
@@ -29,5 +30,12 @@ export default function Dropdown(elementName, items) {
 
   dropdown.append(element, elementItems);
 
+  elementItems.addEventListener("mouseover", () => {
+    element.classList.add("active");
+  });
+
+  elementItems.addEventListener("mouseout", () => {
+    element.classList.remove("active");
+  });
   return dropdown;
 }
