@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#content {
+  width: 100vw;
+  height: 100vh;
+}
+
+.element,
+a {
+  min-width: 120px;
+  height: 40px;
+}
+
+.element,
+li {
+  border-bottom: 1px solid red;
+}
+
+#content,
+li {
+  display: grid;
+  place-content: center;
+}
+
+.element {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+}
+
+ul {
+  visibility: hidden;
+}
+
+.element:hover + ul,
+ul:hover {
+  visibility: visible;
+}
+
+a {
+  display: grid;
+  place-content: center;
+}
+
+a:hover {
+  background-color: aqua;
+}

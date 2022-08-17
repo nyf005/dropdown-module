@@ -38,7 +38,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: "dropdown module",
       filename: "index.html",
-      //   template: "src/template.html",
+      template: "src/template.html",
     }),
   ],
 };
